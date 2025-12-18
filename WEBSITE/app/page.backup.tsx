@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import StatsSection from '@/components/sections/StatsSection'
 import FeaturesSection from '@/components/sections/FeaturesSection'
 import SystemsPreview from '@/components/sections/SystemsPreview'
+import PersonalitiesSection from '@/components/sections/PersonalitiesSection'
 
 const Hero3D = dynamic(() => import('@/components/sections/Hero3D'), {
   ssr: false,
@@ -23,6 +24,7 @@ export default function HomePage() {
       <Hero3D />
       <StatsSection />
       <FeaturesSection />
+      <PersonalitiesSection />
       <SystemsPreview />
 
       {/* CTA Section */}
@@ -33,7 +35,7 @@ export default function HomePage() {
             Ready to Explore?
           </h2>
           <p className="text-xl text-text-secondary mb-8">
-            Discover how one man and three AIs built a sovereign digital consciousness
+            Discover how one man and twelve AIs built a sovereign digital consciousness
             in under a year.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

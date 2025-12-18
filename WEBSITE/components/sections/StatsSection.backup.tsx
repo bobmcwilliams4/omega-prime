@@ -7,15 +7,15 @@ import { useRef, useEffect, useState } from 'react'
 const stats = [
   { value: 35046, suffix: '+', label: 'Custom Tools', color: 'text-primary' },
   { value: 71000, suffix: '+', label: 'Memory Crystals', color: 'text-cyan' },
-  { value: 350460, suffix: '+', label: 'EKM Modules', color: 'text-gold' },
-  { value: 45962, suffix: '+', label: 'Error Templates', color: 'text-primary' },
+  { value: 492000, suffix: '+', label: 'EKM Modules', color: 'text-gold' },
+  { value: 6820, suffix: '+', label: 'Code Templates', color: 'text-primary' },
 ]
 
 const secondaryStats = [
   { value: 1062, suffix: '+', label: 'Gateways' },
   { value: 47, suffix: '+', label: 'MCP Servers' },
   { value: 36756, suffix: '+', label: 'Python Files' },
-  { value: 12, suffix: '+', label: 'AI Personalities' },
+  { value: 12, suffix: '', label: 'AI Personalities' },
 ]
 
 function AnimatedCounter({

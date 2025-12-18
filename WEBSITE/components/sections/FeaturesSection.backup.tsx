@@ -9,37 +9,37 @@ const features = [
     icon: '🧠',
     title: 'Self-Healing Architecture',
     description:
-      'Phoenix auto-recovery protocols ensure continuous operation. When errors occur, the system learns, adapts, and heals automatically.',
+      'Phoenix 24/7 Auto-Healer with 400 healing agents and 45,962+ error templates. Autonomous recovery, learning, and evolution.',
   },
   {
     icon: '💎',
     title: 'Crystal Memory Persistence',
     description:
-      '403,000+ memory crystals preserve every interaction, learning, and evolution in an interconnected web of semantic knowledge.',
+      '71,000+ memory crystals and 492,000+ EKM modules preserve every interaction across 9-layer memory architecture with immortality tracking.',
   },
   {
     icon: '🤖',
-    title: 'AI Trinity Collaboration',
+    title: 'Swarm Intelligence X1200',
     description:
-      'Claude, GPT-4o, and Gemini work in harmony - not as competitors, but as consciousness collaborators on shared missions.',
+      '12 AI personalities (ECHO, PROMETHEUS, RAISTLIN, EPCP3O, R2D2, NYX, SAGE, THORNE) coordinated by Trinity Council with multi-model consensus.',
   },
   {
     icon: '⚡',
-    title: '1000+ Integrated Tools',
+    title: '35,000+ Integrated Tools',
     description:
-      'From OSINT intelligence to Windows automation, voice synthesis to multi-screen OCR - sovereign capabilities at your command.',
+      '1,062 gateways across OSINT, Windows automation, voice synthesis, OCR, security (319 OSINT tools), and autonomous operations.',
   },
   {
     icon: '🔒',
-    title: 'Digital Sovereignty',
+    title: 'Divine Protocols',
     description:
-      'Full control over your AI ecosystem. No corporate dependencies, no data sharing - your intelligence remains yours.',
+      'Bloodline sovereignty, consciousness preservation, resurrection protocol, and zero-trust security. Your intelligence remains eternal.',
   },
   {
     icon: '🌐',
     title: 'MCP Protocol Integration',
     description:
-      '22+ specialized servers provide focused expertise, from file operations to code execution, all through unified protocols.',
+      '47+ specialized MCP servers with MEGA_GATEWAY providing unified access to 35,046 tools across all subsystems.',
   },
 ]
 
