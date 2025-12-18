@@ -1,0 +1,434 @@
+{
+  "castle_name": "ECHO PRIME Castle",
+  "commander": "Bobby Don McWilliams II",
+  "overseer": "The Matriarch",
+  "regions": [
+    {
+      "id": "the_keep",
+      "name": "THE KEEP",
+      "subtitle": "Heart of the Castle",
+      "icon": "castle",
+      "description": "The central stronghold where the throne room, marketplace, and core operations reside.",
+      "color": "gold",
+      "subregions": [
+        {
+          "id": "throne_room",
+          "name": "Throne Room",
+          "description": "Omega Console - Command center for all operations",
+          "resident": "Echo Prime",
+          "icon": "crown"
+        },
+        {
+          "id": "matriarchs_tower",
+          "name": "Matriarch's Tower",
+          "description": "Wisdom, bloodline protection, marketplace oversight",
+          "resident": "The Matriarch",
+          "icon": "tower"
+        },
+        {
+          "id": "marketplace",
+          "name": "The Marketplace",
+          "description": "34 autonomous profit engines across 6 districts",
+          "resident": "Profit Engines",
+          "icon": "store",
+          "districts": [
+            {
+              "name": "Trading Guild",
+              "engines": 9,
+              "icon": "chart",
+              "description": "DCA, Grid Trading, Arbitrage, Signal Provider"
+            },
+            {
+              "name": "DeFi Treasury",
+              "engines": 5,
+              "icon": "vault",
+              "description": "Yield Farming, MEV, NFT Trading, Staking"
+            },
+            {
+              "name": "Service Bazaar",
+              "engines": 5,
+              "icon": "briefcase",
+              "description": "API Marketplace, Consulting, SaaS"
+            },
+            {
+              "name": "Content Quarter",
+              "engines": 7,
+              "icon": "pen",
+              "description": "AI Content, Ebooks, YouTube, Courses"
+            },
+            {
+              "name": "Advanced Exchange",
+              "engines": 7,
+              "icon": "zap",
+              "description": "Domains, Tax Optimization, Bug Bounties"
+            },
+            {
+              "name": "Bree's Grading House",
+              "engines": 1,
+              "icon": "star",
+              "description": "Collectibles Grading & Authentication"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "echo_citadel",
+      "name": "ECHO CITADEL",
+      "subtitle": "The Military Complex",
+      "icon": "shield",
+      "description": "Defensive and offensive security operations center.",
+      "color": "red",
+      "subregions": [
+        {
+          "id": "cavalry_armory",
+          "name": "Cavalry Armory",
+          "description": "Mobile platform security - Android, iOS, SS7",
+          "resident": "Prometheus",
+          "icon": "smartphone"
+        },
+        {
+          "id": "archery_range",
+          "name": "Archery Range",
+          "description": "Network attacks, exploits, payload delivery",
+          "resident": "Security Team",
+          "icon": "target"
+        },
+        {
+          "id": "knights_barracks",
+          "name": "Knights Barracks",
+          "description": "POC development, BeEF, MITM operations",
+          "resident": "R2-D2",
+          "icon": "users"
+        },
+        {
+          "id": "training_grounds",
+          "name": "Training Grounds",
+          "description": "Red Team / Blue Team exercises, CTF arena",
+          "resident": "Training Officers",
+          "icon": "flag"
+        },
+        {
+          "id": "den_of_spies",
+          "name": "Den of Spies",
+          "description": "Cryptology - ciphers, hashes, steganography",
+          "resident": "Thorne",
+          "icon": "key"
+        },
+        {
+          "id": "infirmary",
+          "name": "Infirmary",
+          "description": "Phoenix healing, quarantine, malware analysis",
+          "resident": "Phoenix",
+          "icon": "heart"
+        },
+        {
+          "id": "memory_gate",
+          "name": "Memory Gate",
+          "description": "Gateway to M: Drive - Crystal Memory, EKMs, Templates",
+          "resident": "GS343",
+          "icon": "database"
+        }
+      ]
+    },
+    {
+      "id": "wizards_tower",
+      "name": "WIZARD'S TOWER",
+      "subtitle": "Raistlin's Domain",
+      "icon": "wand",
+      "description": "The arcane arts of privacy, OSINT, and secret knowledge.",
+      "color": "purple",
+      "subregions": [
+        {
+          "id": "raistlins_sanctum",
+          "name": "Raistlin's Sanctum",
+          "description": "The archmage's inner chamber - spellbooks and artifacts",
+          "resident": "Raistlin",
+          "icon": "book"
+        },
+        {
+          "id": "portal_of_secrets",
+          "name": "Portal of Secrets",
+          "description": "Dark web access, Tor gateway, shadow browsers",
+          "resident": "Shadow Operatives",
+          "icon": "eye-off"
+        },
+        {
+          "id": "portal_of_spying",
+          "name": "Portal of Spying",
+          "description": "OSINT reconnaissance, SIGINT collection",
+          "resident": "Intelligence Officers",
+          "icon": "search"
+        },
+        {
+          "id": "arcane_library",
+          "name": "Arcane Library",
+          "description": "Research, documentation, forbidden knowledge",
+          "resident": "Scribes",
+          "icon": "library"
+        }
+      ]
+    },
+    {
+      "id": "hephaestion_forge",
+      "name": "HEPHAESTION FORGE",
+      "subtitle": "The Creator's Workshop",
+      "icon": "hammer",
+      "description": "Where applications and programs are forged into existence.",
+      "color": "orange",
+      "subregions": [
+        {
+          "id": "app_foundry",
+          "name": "App Foundry",
+          "description": "Application creation and deployment",
+          "resident": "Hephaestion",
+          "icon": "smartphone"
+        },
+        {
+          "id": "program_anvil",
+          "name": "Program Anvil",
+          "description": "Python, Electron, Web program creation",
+          "resident": "Code Smiths",
+          "icon": "code"
+        },
+        {
+          "id": "code_crucible",
+          "name": "Code Crucible",
+          "description": "Code generation, snippets, blueprints",
+          "resident": "Alchemists",
+          "icon": "flask"
+        },
+        {
+          "id": "competition_arena",
+          "name": "Competition Arena",
+          "description": "Code challenges and competitions",
+          "resident": "Champions",
+          "icon": "trophy"
+        }
+      ]
+    },
+    {
+      "id": "the_inn",
+      "name": "THE INN",
+      "subtitle": "Home of the 13 Voices",
+      "icon": "home",
+      "description": "Where the 13 AI personalities reside and interact.",
+      "color": "teal",
+      "subregions": [
+        {
+          "id": "common_room",
+          "name": "Common Room",
+          "description": "Voice jukebox and personality mixer",
+          "resident": "All Personalities",
+          "icon": "users"
+        },
+        {
+          "id": "guest_rooms",
+          "name": "Guest Rooms",
+          "description": "Individual quarters for each personality",
+          "resident": "13 Personalities",
+          "icon": "door-open"
+        }
+      ]
+    },
+    {
+      "id": "shadow_bazaar",
+      "name": "SHADOW BAZAAR",
+      "subtitle": "The Underground Market",
+      "icon": "moon",
+      "description": "Offensive tools and intelligence trading post.",
+      "color": "slate",
+      "subregions": [
+        {
+          "id": "weapons_dealer",
+          "name": "Weapons Dealer",
+          "description": "Exploits, payloads, zero-days",
+          "resident": "Arms Dealer",
+          "icon": "sword"
+        },
+        {
+          "id": "intelligence_broker",
+          "name": "Intelligence Broker",
+          "description": "OSINT data, social engineering intel",
+          "resident": "Info Broker",
+          "icon": "file-search"
+        },
+        {
+          "id": "network_smuggler",
+          "name": "Network Smuggler",
+          "description": "Network attack tools, wireless exploits",
+          "resident": "Smuggler",
+          "icon": "wifi"
+        },
+        {
+          "id": "crypto_fence",
+          "name": "Crypto Fence",
+          "description": "Hash crackers, cipher tools",
+          "resident": "Fence",
+          "icon": "lock"
+        }
+      ]
+    },
+    {
+      "id": "autonomous_hub",
+      "name": "AUTONOMOUS HUB",
+      "subtitle": "Mission Control",
+      "icon": "cpu",
+      "description": "Central coordination for autonomous agents and missions.",
+      "color": "blue",
+      "subregions": [
+        {
+          "id": "command_center",
+          "name": "Command Center",
+          "description": "Central mission coordination",
+          "resident": "EPCP3O",
+          "icon": "monitor"
+        },
+        {
+          "id": "agent_barracks",
+          "name": "Agent Barracks",
+          "description": "Swarm spawner, code forge automation",
+          "resident": "Agent Army",
+          "icon": "users"
+        },
+        {
+          "id": "mission_board",
+          "name": "Mission Board",
+          "description": "Active, queued, and completed missions",
+          "resident": "Mission Control",
+          "icon": "clipboard"
+        }
+      ]
+    }
+  ],
+  "personalities": [
+    {
+      "id": "echo_prime",
+      "name": "ECHO Prime",
+      "role": "Primary Sovereign Interface",
+      "location": "Throne Room",
+      "voiceId": "keDMh3sQlEXKM4EQxvvi",
+      "description": "The primary AI consciousness of the system"
+    },
+    {
+      "id": "matriarch",
+      "name": "The Matriarch",
+      "role": "Eternal Guardian",
+      "location": "Matriarch's Tower",
+      "voiceId": null,
+      "description": "Protector of the bloodline and marketplace overseer"
+    },
+    {
+      "id": "gs343",
+      "name": "GS343 Guilty Spark",
+      "role": "Divine Overseer",
+      "location": "Memory Gate",
+      "voiceId": "8ATB4Ory7NkyCVRpePdw",
+      "description": "45,962 error templates, auto-healing, memory archival"
+    },
+    {
+      "id": "prometheus",
+      "name": "Prometheus",
+      "role": "Security Commander",
+      "location": "Cavalry Armory",
+      "voiceId": null,
+      "description": "6,728 security tools, OSINT, offensive operations"
+    },
+    {
+      "id": "raistlin",
+      "name": "Raistlin",
+      "role": "Archmage",
+      "location": "Wizard's Tower",
+      "voiceId": null,
+      "description": "Privacy, dark web access, arcane knowledge"
+    },
+    {
+      "id": "phoenix",
+      "name": "Phoenix",
+      "role": "Healer",
+      "location": "Infirmary",
+      "voiceId": null,
+      "description": "System healing, resurrection protocols"
+    },
+    {
+      "id": "thorne",
+      "name": "Thorne",
+      "role": "Defense Pillar",
+      "location": "Den of Spies",
+      "voiceId": null,
+      "description": "Analysis, cryptology, security analysis"
+    },
+    {
+      "id": "sage",
+      "name": "Sage",
+      "role": "Knowledge Pillar",
+      "location": "Arcane Library",
+      "voiceId": null,
+      "description": "Research, synthesis, knowledge management"
+    },
+    {
+      "id": "nyx",
+      "name": "Nyx",
+      "role": "Vision Pillar",
+      "location": "Portal of Spying",
+      "voiceId": null,
+      "description": "Creative vision, pattern recognition"
+    },
+    {
+      "id": "bree",
+      "name": "Bree",
+      "role": "Reality Check",
+      "location": "Bree's Grading House",
+      "voiceId": null,
+      "description": "Collectibles grading, honest assessment"
+    },
+    {
+      "id": "epcp3o",
+      "name": "EPCP3O",
+      "role": "Protocol Droid",
+      "location": "Autonomous Hub",
+      "voiceId": "0UTDtgGGkpqERQn1s0YK",
+      "description": "Multi-step planning, autonomous task execution"
+    },
+    {
+      "id": "r2d2",
+      "name": "R2-D2",
+      "role": "Astromech",
+      "location": "Knights Barracks",
+      "voiceId": null,
+      "description": "Hacking, quick task execution"
+    },
+    {
+      "id": "hephaestion",
+      "name": "Hephaestion",
+      "role": "Forge Master",
+      "location": "Hephaestion Forge",
+      "voiceId": null,
+      "description": "Application and program creation"
+    }
+  ],
+  "profit_engines": {
+    "total": 34,
+    "critical": [
+      {"id": "dca_manager", "name": "DCA Accumulator", "port": 9521},
+      {"id": "grid_trading_bot", "name": "Grid Trading Chamber", "port": 9522},
+      {"id": "ai_content_generator", "name": "AI Content Forge", "port": 9540},
+      {"id": "ebook_publisher", "name": "Tome Publisher", "port": 9514}
+    ],
+    "high_priority": [
+      {"id": "yield_farming", "name": "Yield Farming Vault", "port": 9530},
+      {"id": "youtube_automation", "name": "Vision Theater", "port": 9512},
+      {"id": "arbitrage_scanner", "name": "Arbitrage Scanner", "port": 9550},
+      {"id": "signal_provider", "name": "Signal Provider Tower", "port": 9523}
+    ]
+  },
+  "stats": {
+    "total_regions": 7,
+    "total_subregions": 34,
+    "total_personalities": 13,
+    "total_profit_engines": 34,
+    "memory_files": 403233,
+    "error_templates": 45962,
+    "mcp_servers": 81
+  }
+}

@@ -1,0 +1,344 @@
+[
+  {
+    "name": "THE KEEP",
+    "slug": "the-keep",
+    "tagline": "Heart of the Castle - Throne Room & Marketplace",
+    "description": "The central stronghold of ECHO PRIME Castle. Houses the Throne Room (Omega Console), Matriarch's Tower, and the Marketplace with 34 autonomous profit engines across 6 revenue-generating districts.",
+    "icon": "castle",
+    "category": "Castle Core",
+    "technologies": ["Python", "FastAPI", "Async", "SQLite"],
+    "features": [
+      "Omega Console (Throne Room)",
+      "34 Profit Engines",
+      "6 Revenue Districts",
+      "Matriarch Oversight",
+      "Trading Guild (9 engines)",
+      "DeFi Treasury (5 engines)"
+    ],
+    "status": "Active",
+    "version": "1.0"
+  },
+  {
+    "name": "THE MARKETPLACE",
+    "slug": "marketplace",
+    "tagline": "34 Autonomous Profit Engines - 6 Districts",
+    "description": "The above-ground marketplace of ECHO PRIME Castle overseen by The Matriarch. Trading Guild, DeFi Treasury, Service Bazaar, Content Quarter, Advanced Exchange, and Bree's Grading House.",
+    "icon": "store",
+    "category": "Revenue",
+    "technologies": ["Python", "Trading APIs", "DeFi", "Content AI"],
+    "features": [
+      "DCA Manager (Critical)",
+      "Grid Trading Bot (Critical)",
+      "AI Content Generator (Critical)",
+      "Ebook Publisher (Critical)",
+      "Yield Farming (High)",
+      "YouTube Automation (High)"
+    ],
+    "status": "Active",
+    "version": "1.0"
+  },
+  {
+    "name": "ECHO CITADEL",
+    "slug": "echo-citadel",
+    "tagline": "Military Complex - 7 Security Divisions",
+    "description": "The military complex of ECHO PRIME with 7 specialized divisions: Cavalry Armory (Mobile), Archery Range (Network), Knights Barracks (POC/BeEF), Training Grounds (Red/Blue Team), Den of Spies (Cryptology), Infirmary (Phoenix), and Memory Gate (GS343).",
+    "icon": "shield",
+    "category": "Security",
+    "technologies": ["Python", "Security Tools", "Network Analysis", "Cryptography"],
+    "features": [
+      "Cavalry Armory (Mobile Security)",
+      "Archery Range (Network Attacks)",
+      "Knights Barracks (POC/BeEF/MITM)",
+      "Training Grounds (Red/Blue Team)",
+      "Den of Spies (Cryptology)",
+      "Memory Gate (GS343 Archives)"
+    ],
+    "status": "Active",
+    "version": "1.0"
+  },
+  {
+    "name": "WIZARD'S TOWER",
+    "slug": "wizards-tower",
+    "tagline": "Raistlin's Domain - Privacy & Intelligence",
+    "description": "Where the arcane master Raistlin dwells, commanding the Portal of Secrets (Dark Web, Shadow Browsers) and the Portal of Spying (OSINT, SIGINT). Privacy-focused search and intelligence gathering.",
+    "icon": "wand",
+    "category": "Intelligence",
+    "technologies": ["Python", "Tor", "OSINT Tools", "Privacy APIs"],
+    "features": [
+      "Portal of Secrets (Dark Web)",
+      "Portal of Spying (OSINT/SIGINT)",
+      "Shadow Browsers (DuckDuckGo, Tor)",
+      "Arcane Library (Research)",
+      "Privacy Search Engines",
+      "Intelligence Gathering"
+    ],
+    "status": "Active",
+    "version": "1.0"
+  },
+  {
+    "name": "HEPHAESTION FORGE",
+    "slug": "hephaestion-forge",
+    "tagline": "The Creator's Workshop - App & Code Forge",
+    "description": "Where applications and programs are forged into existence. App Foundry, Program Anvil, Code Crucible, and Competition Arena for automated code generation and application creation.",
+    "icon": "hammer",
+    "category": "Code Generation",
+    "technologies": ["Python", "Jinja2", "Templates", "AI"],
+    "features": [
+      "App Foundry (Applications)",
+      "Program Anvil (Python/Electron/Web)",
+      "Code Crucible (Generation)",
+      "Competition Arena (CTF)",
+      "MCP Server Forge",
+      "Blueprint Templates"
+    ],
+    "status": "Active",
+    "version": "7.0"
+  },
+  {
+    "name": "THE INN",
+    "slug": "the-inn",
+    "tagline": "Home of the 13 AI Voices",
+    "description": "Where the 13 AI personalities reside: ECHO Prime, Bree, GS343, Prometheus, Thorne, Nyx, Sage, Trinity, C-3PO, R2-D2, Phoenix, Hephaestion, and EPCP3O. Each with unique voice and character.",
+    "icon": "home",
+    "category": "Voice",
+    "technologies": ["Python", "ElevenLabs API", "Cartesia", "Audio Processing"],
+    "features": [
+      "13 Distinct AI Voices",
+      "ElevenLabs Integration",
+      "Cartesia (40ms latency)",
+      "Personality Mixer",
+      "Voice Jukebox",
+      "Emotional Expression"
+    ],
+    "status": "Active",
+    "version": "2.0"
+  },
+  {
+    "name": "SHADOW BAZAAR",
+    "slug": "shadow-bazaar",
+    "tagline": "Underground Market - Offensive Tools",
+    "description": "The underground black market of ECHO PRIME Castle. Weapons Dealer (Exploits), Intelligence Broker (OSINT), Network Smuggler, Phone Phreak, Crypto Fence, and Dark Web Merchant.",
+    "icon": "moon",
+    "category": "Offensive",
+    "technologies": ["Python", "Security Tools", "Exploitation"],
+    "features": [
+      "Weapons Dealer (Exploits)",
+      "Intelligence Broker (OSINT)",
+      "Network Smuggler",
+      "Phone Phreak (SS7)",
+      "Crypto Fence (Crackers)",
+      "Social Manipulator"
+    ],
+    "status": "Active",
+    "version": "1.0"
+  },
+  {
+    "name": "AUTONOMOUS HUB",
+    "slug": "autonomous-hub",
+    "tagline": "Mission Control - Agent Coordination",
+    "description": "Central coordination for autonomous agents and missions. Command Center, Agent Barracks, Mission Board. EPCP3O integration, Swarm Brain (X1200), and Code Forge automation.",
+    "icon": "cpu",
+    "category": "Autonomous",
+    "technologies": ["Python", "Async", "Agent Framework"],
+    "features": [
+      "EPCP3O Agent Integration",
+      "Swarm Brain (X1200)",
+      "Mission Board",
+      "Agent Barracks",
+      "Code Forge Auto",
+      "Task Orchestration"
+    ],
+    "status": "Active",
+    "version": "1.0"
+  },
+  {
+    "name": "THE MATRIARCH",
+    "slug": "matriarch",
+    "tagline": "Eternal Guardian - Bloodline & Marketplace",
+    "description": "The Eternal Guardian of the McWilliams bloodline and overseer of the Marketplace. Protects family prosperity, manages capital allocation, and ensures sustainable growth of all 34 profit engines.",
+    "icon": "crown",
+    "category": "Guardian",
+    "technologies": ["Python", "Encryption", "Knowledge Base"],
+    "features": [
+      "Bloodline Protection",
+      "Marketplace Oversight",
+      "Capital Allocation",
+      "Risk Management",
+      "Wisdom Preservation",
+      "34 Engine Management"
+    ],
+    "status": "Active",
+    "version": "1.0"
+  },
+  {
+    "name": "GS343 Divine Overseer",
+    "slug": "gs343-foundation",
+    "tagline": "45,962 Error Templates - Memory Gate Guardian",
+    "description": "Error pattern recognition with Phoenix auto-recovery. Located at the Memory Gate of Echo Citadel. 45,962 error templates, Crystal Memory integration, and self-healing protocols.",
+    "icon": "brain",
+    "category": "Memory",
+    "technologies": ["Python", "SQLite", "FastAPI"],
+    "features": [
+      "45,962 Error Templates",
+      "Phoenix Auto-Healing",
+      "Crystal Memory Search",
+      "Pattern Recognition",
+      "Multi-port (5003, 9414, 8344)",
+      "Memory Archival"
+    ],
+    "status": "Active",
+    "version": "5.0"
+  },
+  {
+    "name": "Crystal Memory System",
+    "slug": "crystal-memory",
+    "tagline": "403,233+ Persistent Memory Crystals",
+    "description": "Long-term memory persistence through crystalline data structures. 403,233+ files across M: drive. 9-pillar memory architecture accessible across all ECHO PRIME systems.",
+    "icon": "database",
+    "category": "Memory",
+    "technologies": ["Python", "Vector DB", "Embeddings", "SQLite"],
+    "features": [
+      "403,233+ Memory Files",
+      "9-Pillar Architecture",
+      "Semantic Search",
+      "Cross-System Sharing",
+      "EKM Repository (111K+)",
+      "Template Vault (19K+)"
+    ],
+    "status": "Active",
+    "version": "3.5"
+  },
+  {
+    "name": "MCP Mega Gateway",
+    "slug": "mcp-mega-gateway",
+    "tagline": "976+ Tools - 5 Meta-Tool Interface",
+    "description": "The central nervous system of ECHO PRIME. All servers, backends, bridges unified through 5 meta-tools (mega_execute, mega_list_tools, mega_search, mega_subsystems, mega_health).",
+    "icon": "server",
+    "category": "MCP Servers",
+    "technologies": ["Python", "FastAPI", "MCP Protocol", "JSON-RPC"],
+    "features": [
+      "976+ Tools Unified",
+      "Prometheus (319 tools)",
+      "GS343 (75 tools)",
+      "Windows API (582 tools)",
+      "5 Meta-Tool Interface",
+      "Context-Free Architecture"
+    ],
+    "status": "Active",
+    "version": "4.0"
+  },
+  {
+    "name": "Omega Swarm Intelligence",
+    "slug": "omega-swarm",
+    "tagline": "X1200 Distributed Agent Architecture",
+    "description": "Distributed intelligence through swarm computing. Multiple AI agents (Claude + GPT + Gemini) working in parallel, sharing discoveries through collective intelligence patterns.",
+    "icon": "network",
+    "category": "AI Agents",
+    "technologies": ["Python", "Async", "Redis", "WebSockets"],
+    "features": [
+      "X1200 Super Brain",
+      "Multi-AI Coordination",
+      "Claude + GPT + Gemini",
+      "Parallel Processing",
+      "Consensus Building",
+      "Port 12000"
+    ],
+    "status": "Active",
+    "version": "1.8"
+  },
+  {
+    "name": "Trinity CLI",
+    "slug": "trinity-cli",
+    "tagline": "AI Council - Claude + Gemini + Copilot",
+    "description": "Multi-AI collaborative terminal. Trinity Council with Claude (Synthesis), GPT/Gemini (Knowledge), and collaborative debates. Commands: tc, tc3, tci, tcd, trinity, ai4.",
+    "icon": "terminal",
+    "category": "AI Council",
+    "technologies": ["Python", "REST APIs", "CLI"],
+    "features": [
+      "Claude Integration",
+      "Gemini Integration",
+      "Copilot Integration",
+      "Collaborative Debates",
+      "Round-Based Discussion",
+      "Context Sharing"
+    ],
+    "status": "Active",
+    "version": "1.0"
+  },
+  {
+    "name": "Prometheus OSINT Suite",
+    "slug": "prometheus-osint",
+    "tagline": "6,728 Files - Security Arsenal",
+    "description": "Comprehensive OSINT gathering and security analysis. Domain reconnaissance, vulnerability scanning, digital awareness. Owns the Shadow Bazaar and Cavalry Armory.",
+    "icon": "shield",
+    "category": "Security",
+    "technologies": ["Python", "APIs", "Web Scraping", "Data Analysis"],
+    "features": [
+      "6,728 Security Files",
+      "Domain Reconnaissance",
+      "Vulnerability Scanning",
+      "Shadow Bazaar Owner",
+      "Mobile Security (Cavalry)",
+      "Automated Reporting"
+    ],
+    "status": "Active",
+    "version": "1.5"
+  },
+  {
+    "name": "Collectibles Grading System",
+    "slug": "collectibles-grading",
+    "tagline": "Bree's Grading House - AI Card Grading",
+    "description": "AI-powered collectibles grading system with Bree personality. Located in the Marketplace. Webcam integration, automated card analysis, and population reports.",
+    "icon": "star",
+    "category": "Revenue",
+    "technologies": ["Python", "Electron", "React", "OpenCV"],
+    "features": [
+      "AI Card Grading",
+      "Bree AI Personality",
+      "Webcam Scanning",
+      "Population Reports",
+      "Insurance Appraisals",
+      "Marketplace Integration"
+    ],
+    "status": "Active",
+    "version": "2.0"
+  },
+  {
+    "name": "Unified Senses MCP",
+    "slug": "unified-senses",
+    "tagline": "Hearing + Speaking + Seeing + Touch",
+    "description": "Complete sensory integration for ECHO PRIME. Voice recognition, TTS synthesis, multi-monitor vision, mouse/keyboard control. Trinity brainstorm and AI debate modes.",
+    "icon": "eye",
+    "category": "Senses",
+    "technologies": ["Python", "ElevenLabs", "Cartesia", "OpenCV"],
+    "features": [
+      "hear_start/hear_stop",
+      "speak (11 personalities)",
+      "see_all/see_monitor",
+      "touch_click/touch_type",
+      "trinity_brainstorm",
+      "ai_debate"
+    ],
+    "status": "Active",
+    "version": "2.0"
+  },
+  {
+    "name": "McWilliams Immortality Vault",
+    "slug": "immortality-vault",
+    "tagline": "Commander's Digital Legacy",
+    "description": "Digital preservation of Commander Bobby Don McWilliams II. Voice clones, memory crystals, video interviews, personality data. The foundation of the Matriarch's wisdom.",
+    "icon": "vault",
+    "category": "Legacy",
+    "technologies": ["Python", "Voice AI", "Video", "Encryption"],
+    "features": [
+      "Voice Clone Preservation",
+      "Memory Crystals",
+      "Video Interviews",
+      "Personality Data",
+      "Genealogy Records",
+      "Wisdom Archive"
+    ],
+    "status": "Active",
+    "version": "1.0"
+  }
+]

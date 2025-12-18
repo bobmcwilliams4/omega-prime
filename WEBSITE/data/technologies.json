@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Python",
+    "icon": "python",
+    "category": "Languages",
+    "proficiency": 95,
+    "description": "Core systems, MCP servers, AI integration - the backbone of ECHO PRIME"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "typescript",
+    "category": "Languages",
+    "proficiency": 85,
+    "description": "Frontend applications, Electron apps, type-safe development"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "javascript",
+    "category": "Languages",
+    "proficiency": 85,
+    "description": "Web interfaces, Node.js services, rapid prototyping"
+  },
+  {
+    "name": "PowerShell",
+    "icon": "powershell",
+    "category": "Languages",
+    "proficiency": 80,
+    "description": "Windows automation, system administration, scripting"
+  },
+  {
+    "name": "SQL",
+    "icon": "database",
+    "category": "Languages",
+    "proficiency": 75,
+    "description": "Data persistence, queries, database design"
+  },
+  {
+    "name": "Rust",
+    "icon": "rust",
+    "category": "Languages",
+    "proficiency": 40,
+    "description": "Performance-critical components, system-level operations"
+  },
+  {
+    "name": "FastAPI",
+    "icon": "fastapi",
+    "category": "Frameworks",
+    "proficiency": 95,
+    "description": "High-performance async APIs powering MCP servers"
+  },
+  {
+    "name": "Electron",
+    "icon": "electron",
+    "category": "Frameworks",
+    "proficiency": 80,
+    "description": "Cross-platform desktop applications"
+  },
+  {
+    "name": "Next.js",
+    "icon": "nextjs",
+    "category": "Frameworks",
+    "proficiency": 75,
+    "description": "Modern React applications with server-side rendering"
+  },
+  {
+    "name": "React",
+    "icon": "react",
+    "category": "Frameworks",
+    "proficiency": 80,
+    "description": "User interface components and state management"
+  },
+  {
+    "name": "TailwindCSS",
+    "icon": "tailwind",
+    "category": "Frameworks",
+    "proficiency": 85,
+    "description": "Utility-first styling for rapid UI development"
+  },
+  {
+    "name": "Local LLMs",
+    "icon": "brain",
+    "category": "AI & ML",
+    "proficiency": 90,
+    "description": "Sovereign inference with locally hosted language models"
+  },
+  {
+    "name": "Embeddings",
+    "icon": "vector",
+    "category": "AI & ML",
+    "proficiency": 85,
+    "description": "Semantic search and memory through vector representations"
+  },
+  {
+    "name": "LangChain",
+    "icon": "chain",
+    "category": "AI & ML",
+    "proficiency": 75,
+    "description": "LLM orchestration and agent development"
+  },
+  {
+    "name": "Claude API",
+    "icon": "anthropic",
+    "category": "AI & ML",
+    "proficiency": 95,
+    "description": "Primary AI partner for system architecture"
+  },
+  {
+    "name": "OpenAI API",
+    "icon": "openai",
+    "category": "AI & ML",
+    "proficiency": 90,
+    "description": "GPT-4o integration for vision and creativity"
+  },
+  {
+    "name": "Gemini API",
+    "icon": "google",
+    "category": "AI & ML",
+    "proficiency": 80,
+    "description": "Multi-modal synthesis and pattern recognition"
+  },
+  {
+    "name": "SQLite",
+    "icon": "sqlite",
+    "category": "Databases",
+    "proficiency": 90,
+    "description": "Lightweight, embedded database for local storage"
+  },
+  {
+    "name": "ChromaDB",
+    "icon": "chroma",
+    "category": "Databases",
+    "proficiency": 80,
+    "description": "Vector database for semantic memory storage"
+  },
+  {
+    "name": "Redis",
+    "icon": "redis",
+    "category": "Databases",
+    "proficiency": 65,
+    "description": "In-memory caching and message queuing"
+  },
+  {
+    "name": "MCP Protocol",
+    "icon": "protocol",
+    "category": "Infrastructure",
+    "proficiency": 95,
+    "description": "Model Context Protocol for AI tool integration"
+  },
+  {
+    "name": "Docker",
+    "icon": "docker",
+    "category": "Infrastructure",
+    "proficiency": 70,
+    "description": "Containerization for deployment and isolation"
+  },
+  {
+    "name": "Git",
+    "icon": "git",
+    "category": "Infrastructure",
+    "proficiency": 85,
+    "description": "Version control and code management"
+  },
+  {
+    "name": "VS Code",
+    "icon": "vscode",
+    "category": "Tools",
+    "proficiency": 95,
+    "description": "Primary development environment"
+  },
+  {
+    "name": "ElevenLabs",
+    "icon": "audio",
+    "category": "Tools",
+    "proficiency": 85,
+    "description": "Text-to-speech synthesis for AI voices"
+  }
+]

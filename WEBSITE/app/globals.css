@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #9900ff;
+  --primary-dark: #6600cc;
+  --primary-glow: rgba(153,0,255,0.5);
+  --cyan: #00ffff;
+  --cyan-glow: rgba(0,255,255,0.3);
+  --gold: #ffd700;
+  --bg-dark: #0a0a0f;
+  --bg-card: #1a1a2e;
+  --bg-gradient: #1a0a2e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-gradient) 50%, var(--bg-dark) 100%);
+  background-attachment: fixed;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-background-card/60 backdrop-blur-xl border border-primary/20 rounded-2xl;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300;
+  }
+
+  .glass-card-hover:hover {
+    @apply border-primary/50;
+    box-shadow: 0 8px 32px rgba(153, 0, 255, 0.2), 0 0 60px rgba(153, 0, 255, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .glow-border {
+    @apply relative;
+  }
+
+  .glow-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl;
+    background: linear-gradient(135deg, var(--primary), var(--cyan));
+    opacity: 0;
+    z-index: -1;
+    filter: blur(20px);
+    transition: opacity 0.3s ease;
+  }
+
+  .glow-border:hover::before {
+    opacity: 0.5;
+  }
+
+  .btn-primary {
+    @apply px-8 py-4 bg-primary text-white font-semibold rounded-xl transition-all duration-300;
+    box-shadow: 0 4px 20px rgba(153, 0, 255, 0.4);
+  }
+
+  .btn-primary:hover {
+    @apply bg-primary-dark;
+    box-shadow: 0 6px 30px rgba(153, 0, 255, 0.6);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 bg-transparent border-2 border-cyan text-cyan font-semibold rounded-xl transition-all duration-300;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-cyan/10;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-cyan to-primary;
+    background-size: 200% auto;
+    animation: gradient 3s linear infinite;
+  }
+
+  .section-title {
+    @apply text-h1 font-heading font-bold text-gradient mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-text-secondary max-w-2xl mx-auto;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary/20 text-primary border border-primary/30;
+  }
+
+  .badge-cyan {
+    @apply badge bg-cyan/20 text-cyan border border-cyan/30;
+  }
+
+  .badge-gold {
+    @apply badge bg-gold/20 text-gold border border-gold/30;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Selection */
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* Particle animation background */
+.particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: particle 20s linear infinite;
+}
+
+/* Code blocks */
+pre {
+  @apply bg-background-card rounded-xl p-4 overflow-x-auto;
+  border: 1px solid rgba(153, 0, 255, 0.2);
+}
+
+code {
+  @apply font-mono text-sm;
+}
+
+/* Links */
+a {
+  @apply text-cyan hover:text-primary transition-colors duration-200;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
