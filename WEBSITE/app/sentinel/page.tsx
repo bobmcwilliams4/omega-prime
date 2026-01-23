@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import SentinelAPI, {
   ChatResponse,
@@ -8,6 +8,7 @@ import SentinelAPI, {
   TrustLevel,
   generateSessionId,
 } from '@/lib/sentinel-api';
+import { useVoice } from '@/lib/useVoice';
 
 interface Message {
   id: string;
@@ -23,27 +24,72 @@ interface Message {
 }
 
 const PERSONALITIES: { value: Personality; label: string; color: string }[] = [
-  { value: 'SENTINEL', label: 'SENTINEL', color: 'from-purple-500 to-pink-500' },
-  { value: 'ECHO_PRIME', label: 'Echo Prime', color: 'from-orange-500 to-red-500' },
-  { value: 'CLAUDE', label: 'Claude', color: 'from-blue-500 to-cyan-500' },
-  { value: 'SAGE', label: 'Sage', color: 'from-green-500 to-emerald-500' },
-  { value: 'NYX', label: 'Nyx', color: 'from-violet-500 to-purple-500' },
-  { value: 'PROMETHEUS', label: 'Prometheus', color: 'from-red-600 to-orange-500' },
-  { value: 'GS343', label: 'GS343', color: 'from-yellow-400 to-amber-500' },
-  { value: 'PHOENIX', label: 'Phoenix', color: 'from-red-400 to-yellow-500' },
-  { value: 'BREE', label: 'Bree', color: 'from-pink-400 to-rose-500' },
+  { value: 'echo_prime', label: 'Echo Prime', color: 'from-orange-500 to-red-500' },
+  { value: 'claude', label: 'Claude', color: 'from-blue-500 to-cyan-500' },
+  { value: 'sage', label: 'Sage', color: 'from-green-500 to-emerald-500' },
+  { value: 'nyx', label: 'Nyx', color: 'from-violet-500 to-purple-500' },
+  { value: 'prometheus', label: 'Prometheus', color: 'from-red-600 to-orange-500' },
+  { value: 'gs343', label: 'GS343', color: 'from-yellow-400 to-amber-500' },
+  { value: 'phoenix', label: 'Phoenix', color: 'from-red-400 to-yellow-500' },
+  { value: 'bree', label: 'Bree', color: 'from-pink-400 to-rose-500' },
+  { value: 'raistlin', label: 'Raistlin', color: 'from-purple-600 to-indigo-500' },
+  { value: 'thorne', label: 'Thorne', color: 'from-gray-600 to-slate-500' },
+  { value: 'r2d2', label: 'R2D2', color: 'from-sky-400 to-blue-500' },
+  { value: 'epcp3o', label: 'EPCP3O', color: 'from-amber-400 to-yellow-500' },
 ];
 
 export default function SentinelPage() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [personality, setPersonality] = useState<Personality>('SENTINEL');
+  const [personality, setPersonality] = useState<Personality>('echo_prime');
   const [sessionId] = useState(generateSessionId);
   const [isHealthy, setIsHealthy] = useState<boolean | null>(null);
   const [showSettings, setShowSettings] = useState(false);
+  const [autoSpeak, setAutoSpeak] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  // Voice hook for TTS
+  const { state: voiceState, playVoice, stopVoice } = useVoice();
+
+  // Map personality names to voice API format
+  const getVoicePersonality = useCallback((p: Personality): string => {
+    const map: Record<string, string> = {
+      'echo_prime': 'ECHO PRIME',
+      'claude': 'ECHO PRIME', // Use Echo Prime voice for Claude
+      'sage': 'SAGE',
+      'nyx': 'NYX',
+      'prometheus': 'PROMETHEUS',
+      'gs343': 'GS343',
+      'phoenix': 'PHOENIX',
+      'bree': 'BREE',
+      'raistlin': 'RAISTLIN',
+      'thorne': 'THORNE',
+      'r2d2': 'R2D2',
+      'epcp3o': 'EPCP3O',
+    };
+    return map[p] || 'ECHO PRIME';
+  }, []);
+
+  // Speak response with TTS
+  const speakResponse = useCallback(async (text: string, responsePersonality: Personality) => {
+    if (!autoSpeak) return;
+    try {
+      const voicePersonality = getVoicePersonality(responsePersonality);
+      await playVoice(voicePersonality, text);
+    } catch (error) {
+      console.error('TTS error:', error);
+    }
+  }, [autoSpeak, playVoice, getVoicePersonality]);
+
+  // Toggle auto-speak
+  const toggleAutoSpeak = useCallback(() => {
+    if (voiceState.isPlaying) {
+      stopVoice();
+    }
+    setAutoSpeak(prev => !prev);
+  }, [voiceState.isPlaying, stopVoice]);
 
   // Check API health on mount
   useEffect(() => {
@@ -92,13 +138,18 @@ export default function SentinelPage() {
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
+
+      // Speak the response with TTS
+      if (autoSpeak && response.response) {
+        await speakResponse(response.response, response.personality || personality);
+      }
     } catch (error) {
       const errorMessage: Message = {
         id: `msg-${Date.now()}-error`,
         role: 'assistant',
         content: `Connection error: ${error instanceof Error ? error.message : 'Unable to reach SENTINEL PRIME V2'}. Please try again.`,
         timestamp: new Date(),
-        personality: 'SENTINEL',
+        personality: 'echo_prime',
       };
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
@@ -148,6 +199,28 @@ export default function SentinelPage() {
                 {isHealthy === null ? 'Connecting...' : isHealthy ? 'Online' : 'Offline'}
               </span>
             </div>
+
+            {/* Voice Toggle */}
+            <button
+              onClick={toggleAutoSpeak}
+              className={`p-2 rounded-lg transition ${
+                autoSpeak
+                  ? 'bg-primary/20 text-primary hover:bg-primary/30'
+                  : 'bg-gray-800 text-text-secondary hover:bg-gray-700'
+              } ${voiceState.isPlaying ? 'animate-pulse' : ''}`}
+              title={autoSpeak ? 'Voice ON - Click to mute' : 'Voice OFF - Click to enable'}
+            >
+              {autoSpeak ? (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                </svg>
+              )}
+            </button>
 
             {/* Settings Toggle */}
             <button
@@ -296,8 +369,16 @@ export default function SentinelPage() {
               </svg>
             </button>
           </div>
-          <p className="text-xs text-text-secondary text-center mt-2">
-            SENTINEL PRIME V2 | Authority 11.0 SOVEREIGN | Session: {sessionId.slice(0, 20)}...
+          <p className="text-xs text-text-secondary text-center mt-2 flex items-center justify-center gap-2">
+            <span>SENTINEL PRIME V2</span>
+            <span>|</span>
+            <span className={autoSpeak ? 'text-primary' : 'text-text-secondary'}>
+              Voice {autoSpeak ? 'ON' : 'OFF'}
+              {voiceState.isPlaying && ' (Speaking...)'}
+              {voiceState.isLoading && ' (Loading...)'}
+            </span>
+            <span>|</span>
+            <span>Session: {sessionId.slice(0, 20)}...</span>
           </p>
         </div>
       </footer>
