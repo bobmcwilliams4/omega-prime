@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Orbitron, JetBrains_Mono } from 'next/font/google'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+import LayoutShell from '@/components/layout/LayoutShell'
 import './globals.css'
 
 const inter = Inter({
@@ -42,9 +41,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${orbitron.variable} ${jetbrains.variable} font-body antialiased`}
       >
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   )
