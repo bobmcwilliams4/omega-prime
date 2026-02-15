@@ -18,6 +18,8 @@ const AGENTS = [
   { id: 'agent_5001khgp3xthff1vhkag1xey12sv', name: 'Sheriff Andy Taylor', role: 'HOA President', premise: "Reluctant HOA enforcer. Barney did the inspection. The violations are INSANE.", color: '#8B4513', icon: '🎣', side: 'light' as const },
   { id: 'agent_9901khgp4t5qe8esq1b166xj85jd', name: 'Deputy Barney Fife', role: 'Cybercrime Unit Chief', premise: "Self-appointed cyber cop. Has ONE bullet. Doesn't know what a firewall is.", color: '#4169E1', icon: '🔫', side: 'light' as const },
   { id: 'agent_0201khgp5qbhf3qrqs1ygnsb66q6', name: 'Gomer Pyle', role: '911 Dispatcher', premise: "Left alone at dispatch. Pressing random buttons. GOLLY this is going badly.", color: '#FF6347', icon: '🚨', side: 'light' as const },
+  // --- BUSINESS DEMO ---
+  { id: 'agent_7901khgqmsy8ey1rw38py5qxzxpa', name: 'SPL Lead Qualifier', role: 'AI Sales Development Rep', premise: "Professional lead qualification for SPL West Texas. Qualifies prospects and books appointments with Billy McLaughlin.", color: '#00C853', icon: '📊', side: 'neutral' as const },
 ]
 
 type Agent = typeof AGENTS[number]
