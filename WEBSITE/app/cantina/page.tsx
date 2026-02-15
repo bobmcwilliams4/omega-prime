@@ -19,7 +19,7 @@ const AGENTS = [
   { id: 'agent_9901khgp4t5qe8esq1b166xj85jd', name: 'Deputy Barney Fife', role: 'Cybercrime Unit Chief', premise: "Self-appointed cyber cop. Has ONE bullet. Doesn't know what a firewall is.", color: '#4169E1', icon: '🔫', side: 'light' as const },
   { id: 'agent_0201khgp5qbhf3qrqs1ygnsb66q6', name: 'Gomer Pyle', role: '911 Dispatcher', premise: "Left alone at dispatch. Pressing random buttons. GOLLY this is going badly.", color: '#FF6347', icon: '🚨', side: 'light' as const },
   // --- BUSINESS DEMO ---
-  { id: 'agent_7901khgqmsy8ey1rw38py5qxzxpa', name: 'SPL Lead Qualifier', role: 'AI Sales Development Rep', premise: "Professional lead qualification for SPL West Texas. Qualifies prospects and books appointments with Billy McLaughlin.", color: '#00C853', icon: '📊', side: 'neutral' as const },
+  { id: 'agent_7901khgqmsy8ey1rw38py5qxzxpa', name: 'Echo Prime AI SDR', role: 'Lead Qualifier Demo', premise: "Live demo: AI that qualifies leads, handles objections, and books appointments with Billy McLaughlin. This call IS the product.", color: '#00C853', icon: '📞', side: 'light' as const },
 ]
 
 type Agent = typeof AGENTS[number]
