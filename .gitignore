@@ -38,3 +38,7 @@ secrets/
 *.dll
 *.bin
 *.iso
+
+# Next.js build
+.next/
+out/

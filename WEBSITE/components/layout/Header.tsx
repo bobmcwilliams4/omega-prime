@@ -10,6 +10,7 @@ const navItems = [
   { label: 'Systems', href: '/systems' },
   { label: 'Technology', href: '/technology' },
   { label: 'SENTINEL', href: '/sentinel' },
+  { label: 'Cantina', href: '/cantina' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
